@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2047&q=80');
+      background-size: cover;  
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      color: #FFFACD;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 120px auto 0;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #556B2F;
+      margin-bottom: 20px;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .contact-form label {
+      font-size: 18px;
+      color: #556B2F;
+      text-transform: lowercase;
+      font-weight: bold;
+      font-family: Georgia, serif;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      background-color: #ECE5B6;
+      font-family: Georgia, serif;
+      text-transform: lowercase;
+      font-weight: bold;
+      color: #556B2F;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 40px;
+    }
+
+    .contact-form button[type="submit"] {
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 3px auto 0;
+      background-color: #556B2F;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-transform: lowercase;
+      font-family: Georgia, serif;
+      border-radius: 10px;
+    }
+
+    .contact-form button[type="submit"]:hover {
+      background-color: #8FBC8F;
+    }
+
+    footer {
+      background-color: transparent;
+      font-size: 14px;
+      padding: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    setTimeout(function() {
+      const container = document.querySelector('.container');
+      container.style.opacity = '1';
+      container.style.transform = 'translateY(0)';
+    }, 700);
+
+    // Form validation function
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const phoneInput = document.getElementById('phone');
+
+      // Regular expression to check for special characters and spaces
+      const specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\ ]/;
+      // Regular expression to check for exactly 10-digit phone number
+      const phoneRegex = /^\d{10}$/;
+
+      if (nameInput.value.length < 3 || specialCharRegex.test(nameInput.value)) {
+        alert('Name must be at least 3 characters long and should not contain special characters or spaces.');
+        event.preventDefault(); // Prevent form submission
+      }
+
+      if (emailInput.value.indexOf('@') === -1) {
+        alert('Email must contain the "@" symbol.');
+        event.preventDefault(); // Prevent form submission
+      }
+
+      if (!phoneRegex.test(phoneInput.value)) {
+        alert('Phone number must be exactly 10 digits.');
+        event.preventDefault(); // Prevent form submission
+      }
+    });
+  </script>
+  <div class="container">
+    <h1>Sign Up</h1>
+    <div class="contact-form">
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="message">Leave Us a Message (optional)</label>
+        <textarea id="message" name="message" rows="2"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <footer></footer>
+</body>
+</html>
+

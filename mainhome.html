@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>downtown zen</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia';
+      background-color: #FFFACD; /* Café Cream */
+    }
+
+    header {
+      background-color: #FFFACD; /* Café Cream */
+      font-family: 'Georgia';
+      font-weight: bold;
+      color: #6F4E37; /* Café Brown */
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #6F4E37; /* Café Brown */
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .hero {
+      background-image: url('cafe-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 100px 0;
+      color: #99C68E; /* Café Cream */
+    }
+
+    .hero h2 {
+      font-size: 36px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    
+    .image-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: -40px; 
+    }
+
+    .image-container a {
+      margin: 10px;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .image-container img {
+      border-radius: 10px; 
+      transition: transform 0.3s;
+    }
+
+    .image-container a:hover img {
+      transform: scale(1.1);
+    }
+
+    .text-overlay {
+      background-color: rgba(162, 228, 184, 0);
+      color: #FFFFFF; /* Café Brown */
+      padding: 100px 200px;
+      font-family: 'Georgia';
+      font-weight: bold;
+      font-size: 90px;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .image-container a:hover .text-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="cafe-name">
+      <p style="font-family: 'Georgia', serif; font-size: 40px; text-align: center; margin-left: 30px; font-weight: bold; color: #9CB071">downtown zen</p>
+    </div>
+    <nav>
+      <div style="margin-right: 30px">
+        <ul class="nav-links">
+          <li><a href="thegallery.html" style="font-family: 'Georgia', serif;  font-size: 20px; color: #73A16C;">gallery</a></li>
+	  <li><a href="mainhome.html" style="font-family: 'Georgia', serif;  font-size: 20px; color: #73A16C;">|</a></li>
+          <li><a href="signup.html" style="font-family: 'Georgia', serif; font-size: 20px; color:#73A16C;">sign up</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="image-container">
+      <a href="OURSTORYY.html">
+        <img src="https://i.pinimg.com/564x/f8/c2/a2/f8c2a21e9649715838af05d50cf5d159.jpg" alt="My Cafe Picture" height="500px" width="400px">
+        <div class="text-overlay">Our Story</div>
+      </a>
+      <a href="menupage.html">
+        <img src="https://i.pinimg.com/564x/6a/4a/e7/6a4ae74ca777699dcd76517d660c4f63.jpg" height="500px" width="360px">
+        <div class="text-overlay">Our Menu</div>
+      </a>
+      <a href="concon.html">
+        <img src="https://i.pinimg.com/564x/95/fe/87/95fe877384c47e10e3463e0337ab9d4f.jpg" alt="My Cafe Picture" height="500px">
+        <div class="text-overlay">Visit Us</div>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

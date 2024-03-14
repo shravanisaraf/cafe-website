@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-family: 'Georgia', serif;
+            color: #9CB071;
+            font-size: 15px;
+        }
+
+        header {
+            background-color: #FFFACD;
+            font-family: 'Georgia', serif;
+            font-size: 40px;
+            color: #9CB071;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+	}
+
+        body {
+            text-align: center;background-color: #FFFACD; 
+        }
+
+        p {
+            color: #9CB071 ;
+            font-family: Georgia, serif;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 800px;
+            line-height: 2.0;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left, .right {
+            flex: 1;
+            border: 52px solid #9CB071; 
+            padding: 20px;
+        }
+
+        .divider {
+            border-left: 1px solid #9CB071;
+            height: 100%;
+        }
+
+        
+        .centered-div {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Larger font size for titles */
+        .title {
+            font-size: 54px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cafe-name">
+            <p>Contact Us</p>
+        </div>
+    </header>
+    <video controls autoplay loop muted>
+        <source src="werehere.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="left centered-div">
+            <p class="title"><strong>Find Us</strong></p>
+            <br>
+            <p>15,Wodehouse Road, Opposite Regal Cinema,<br> Colaba, Mumbai, Maharashtra 400032</p>
+        </div>
+        <div class="divider"></div>
+        <div class="right centered-div">
+            <p class="title"><strong>Always Open!</strong></p>
+            <br>
+            <p>9:30 AM – 11:00 PM</p>
+            <p>Everyday!</p>
+        </div>
+    </div>
+</body>
+</html>
